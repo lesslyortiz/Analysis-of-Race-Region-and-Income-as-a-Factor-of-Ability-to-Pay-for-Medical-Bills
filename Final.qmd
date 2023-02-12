@@ -1,0 +1,251 @@
+---
+title: "Analysis of Race, Region, and Income as a Factor of Ability to Pay for Medical Bills"
+author: "Lessly Ortiz and Sophia Silovsky"
+format:
+  html:
+    self-contained: true
+---
+## Abstract 
+The purpose of our analysis is to see if there exists a combined effect of income, race, and region on a person’s ability to pay or having issues paying medical bills in the last 12 months. This project used data from the IPUMS National Health Interview Series from 2020. We fit three different models before deciding on one logistic regression model, where the model states that the effect of the region will change across racial groups, when controlling for the simultaneous additive effect of family income. We found evidence supporting some of our hypothesis, in terms of income being a significant predictor across all regions and racial groups, and the combination of the white group in the Northeast being a significant baseline. 
+Additionally, we found that certain regions and race groups have significant differences from the baseline average. Specifically, the South region, Black/African American group, Asian group, and the combination of the Black/African American group in the North Central / Midwest had a significant difference from the baseline. However, we cannot completely accept or reject our hypothesis. 
+
+## Introduction
+The U.S. has shown a significant growth in economic disparities between different regions in recent decades. One research paper shows that as recently as 1980, “large sections of the country had incomes roughly in line with the national average”, but within 33 years “the country had bifurcated into a handful of thriving metro areas and a much larger set of places with far lower incomes.” ^[https://equitablegrowth.org/how-national-income-inequality-in-the-united-states-contributes-to-economic-disparities-between-regions/] Moreover, healthcare access and care in the United States is not equal across citizens, plain and simple. It has already been proven by researchers that those with higher socioeconomic statuses have fewer health problems. In fact, those with a lower socioeconomic status are more susceptible to certain health conditions. ^[https://www.ncbi.nlm.nih.gov/books/NBK25526/] Additionally, a person's issues with accessing proper healthcare seems to have a relationship with their race. Research prior to 2020 shows that “adult uninsured rates and racial and ethnic coverage inequities declined in almost every state from 2013 to 2019, leading to both increased and more equitable health care access. But progress stalled nationally after 2016, and all groups have reported recent drops in coverage or access." ^[https://www.commonwealthfund.org/publications/issue-briefs/2021/jun/racial-ethnic-inequities-health-care-coverage-access-2013-2019] 
+
+To expand upon previous research, this project reviews the question, “is there a combined effect of income, race, and region on a person’s ability to pay or having issues paying medical bills in the last 12 months?” Academics have investigated the effect race and income have on health disparities and the effect region has on income. However, not much research has been done on the effect race, income, and race has on health disparities. This project’s hypothesis is that there is a difference in average odds on a person’s ability to pay or having issues paying medical bills based on the combined effect of income, race, and region. More specifically, a person’s race, region, and income affects the odds of whether they will have issues paying medical bills. 
+
+## Methods
+### Data
+This project used data from the IPUMS National Health Interview Series, or the IPUMS-NHIS. The survey was conducted in 2020, and given to random households throughout the United states. The NHIS covers, on average, 45,000 households each year and asks questions about general health status or health experiences in the past 12 months. ^[https://www.ipums.org/projects/ipums-health-surveys/d070.v6.2] In the 2020 survey, the survey reached 32,345 households. ^[https://nhis.ipums.org/nhis/userNotes_size.shtml]
+
+
+### Variables
+This project has one binary outcome variable, two categorical explanatory variables, and one numeric explanatory variable. The binary outcome variable, or HIPROBPAYR, indicates whether or not a person had problems paying or were unable to pay any medical bills in the past 12 months. This included bills for doctors, dentists, hospitals, therapists, medication, equipment, nursing home or home care. The levels for this variable are "Yes" and "No". A "success" in this case is a survey taker putting "Yes" to "Problems paying or unable to pay medical bills in the last 12 months". A "failure" in this case is a survey taker putting "No" to "Problems paying or unable to pay medical bills in the last 12 months".
+The two categorical explanatory variables are REGION and RACENEW. In other words, REGION is the region the survey taker is from, denoted by four categories: North Central / Midwest, South, West, Northeast. At first, REGION contained the four categories above, but also included two other categories, NO DATA and Unknown. To prevent any confusion while performing our analysis, we removed all instances of NO DATA and Unknown before forming our model. 
+
+RACENEW is the self-reported race of the survey taker, denoted by five categories: White only, Black/African American only, American Indian/Alaska Native only, Asian only, Other Race and Multiple Race. At first, RACENEW contained:        
+
+* White only 
+* Black/African American only 
+* American Indian/Alaska Native only
+* Asian only 
+* Other Race and Multiple Race 
+* Other Race and Multiple Race (2019-forward: Excluding American Indian/Alaska Native) 
+* Other Race 
+* Race Group Not Releasable 
+* Multiple Race 
+* Multiple Race (1999-2018: Including American Indian/Alaska Native) 
+* American Indian/Alaska Native and Any Other Race 
+* Unknown-Refused 
+* Unknown-Not ascertained 
+* Unknown-Don't Know 
+
+We dropped all categories with “Unknown” and the category “Race Group Not Releasable”. If we do not know the individual’s race, then we cannot test our hypothesis. Additionally, we wanted to include “American Indian / Alaska Native” and “Other Race and Multiple Race” as their own racial groups. Thus, we dropped “American Indian/Alaska Native and Any Other Race”, “Multiple Race”, “Multiple Race (1999-2018: Including American Indian/Alaska Native)”, “Other Race”, and “Other Race and Multiple Race”. Adding any of these categories would create multicollinearity issues. We then renamed our variable “Other Race and Multiple Race (2019-forward: Excluding American Indian/Alaska Native)” as just “Other Race and Multiple Race”. 
+
+IPUMS provided the option between getting our family income values in the form of a categorical variable with income bracket levels (INCFAM07ON) or a continuous numerical value variable (FAMTOTINC). We settled with the continuous numerical variable, since it would allow a more precise measure of income. To prevent a violation in the independence assumption, we wrangled our data to select only one family member per household.
+
+We chose HIPROBAYR over similar variables which also explained a person’s healthcare payment issues because HIPROBAYR included both individuals who had issues paying medical bills or could not pay them at all within the last 12 months. It included the most number of observations that relate to our research question as a result. 
+
+### Model
+We had three choices for our model in this project. First, race and income had an interactive relationship when controlling for the additive effect of family income: _HIPROBPAYR ~ REGION + RACENEW \* FAMTOTINC_. Second, race, income, and region had an interactive relationship: _HIPROBPAYR ~ REGION \* RACENEW \* FAMTOTINC_. Third, race and region had an interactive relationship when controlling for the additive effect of family income: _HIPROBPAYR ~ REGION \* RACENEW + FAMTOTINC_. After comparing nested F-tests on all of our models, we decided that the third model, _HIPROBPAYR ~ REGION \* RACENEW + FAMTOTINC_, was best in predicting whether or not a person had issues with paying medical bills _(p = 0.001374)_.
+
+In other words, our chosen model states that the effect of the region will change across racial groups, when controlling for the simultaneous additive effect of family income.
+
+## Results
+Our model, _HIPROBPAYR ~ REGION * RACENEW + FAMTOTINC_, produces an intercept of `-1.670`. In other words, the estimated odds of having problems paying your medical bills for a white person with an income of zero who lives in the Northeast would be `0.1882471 to 1`, on average. The intercept coefficient is statistically significant with _p-value of < 2e-16_, indicating a very small probability of observing a coefficient of this magnitude or more extreme if the actual value was zero.
+
+Our model also produces a slope of `-9.604e-06`. In other words, for each additional $1 in a person’s annual family income, the odds of them having issues paying for their medical bills decrease `0.999` times, on average. The intercept coefficient is statistically significant with _p-value of < 2e-16_, indicating a very small probability of observing a coefficient of this magnitude or more extreme if the actual value was zero.
+
+The only other coefficients in our model that produce significant results is one region, two racial groups, and one interaction of region and racial group produced significant differences from the average effect of race and region. 
+
+The coefficient value for _REGIONSouth_ is `3.052e-01`. Thus, the odds of having issues paying for medical bills for white people with an annual family income of $0 in the South are `1.357` times the odds for the same group in the Northeast, on average _(p = 2.47e-06)_.
+
+The coefficient value for _RACENEWBlack/African American only_ is `2.865e-01`. Thus, the odds of having issues paying for medical bills for Black/African American only race group with an annual family income of \$0 in the Northeast are 1.332 times the odds for a white person with an income of \$0 in the Northeast, on average _(p = 0.04274)_. 
+
+The coefficient value for _RACENEWAsian_ only is `-5.978e-01`. The odds of having issues paying for medical bills for Asian only race group with an annual family income of \$0 in the Northeast are 0.550 times the odds for a white person with an income of \$0 in the Northeast, on average _(p = 0.04274)_.
+
+The coefficient value for _REGIONNorth Central/Midwest:RACENEWBlack/African American only_ is `5.546e-01`. Thus, the odds of having issues paying for medical bills for Black/African American only race group with an annual family income of \$0 in the Midwest are 1.741 times the odds for a white person with an income of \$0 in the Northeast, on average _(p = 0.00264)_.
+
+The other coefficients in our model related to region, race, and the interaction of region and race did not produce significant differences from the average effect of race and region.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(ipumsr)
+library(tidyverse)
+library(moderndive)
+library(dplyr)
+library(tidyr)
+library(car)
+library(broom)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+if (!require("ipumsr")) stop("Reading IPUMS data into R requires the ipumsr package. 
+                             It can be installed using the following command: 
+                             install.packages('ipumsr')")
+
+ddi <- read_ipums_ddi("nhis_00003.xml")
+data <- read_ipums_micro(ddi)
+```
+
+```{r, echo=FALSE}
+data <- data |>
+  group_by(SERIAL)|>
+  filter(PERNUM == 1) |>
+  ungroup()
+
+HIPROBPAYR_data <- data |>
+  select(HIPROBPAYR, REGION, RACENEW, FAMTOTINC) |>
+  mutate(HIPROBPAYR = lbl_na_if(HIPROBPAYR, ~.val >= 7)) |>
+  filter(!is.na(HIPROBPAYR)) |>
+  mutate(HIPROBPAYR = as.numeric(HIPROBPAYR)-1) |>
+  mutate(REGION = lbl_na_if(REGION, ~.val >= 8)) |>
+  filter(!is.na(REGION)) |>
+  mutate(REGION = as_factor(REGION)) |>
+  mutate(RACENEW = lbl_na_if(RACENEW, ~.val >= 520)) |>
+  mutate(RACENEW = lbl_na_if(RACENEW, ~.val == 500)) |>
+  filter(!is.na(RACENEW)) |>
+  mutate(RACENEW = as_factor(RACENEW)) |>
+  mutate(FAMTOTINC = as.numeric(FAMTOTINC))
+```
+
+
+```{r, echo=FALSE}
+levels(HIPROBPAYR_data$RACENEW)[levels(HIPROBPAYR_data$RACENEW) == "Other Race and Multiple Race (2019-forward: Excluding American Indian/Alaska Native)"] <- "Other Race and Multiple Race"
+```
+
+```{r, echo = FALSE}
+hip4_model <- glm(HIPROBPAYR ~ REGION * RACENEW + FAMTOTINC,
+                  data = HIPROBPAYR_data,
+                  family = binomial
+                   )
+```
+
+```{r, echo = FALSE}
+ref_grid <- expand.grid(FAMTOTINC = seq(seq(from = 0, to = 250000, by = 1)),
+                        RACENEW = c("White only",
+                                    "Black/African American only",
+                                    "Asian only",
+                                    "Other Race and Multiple Race",
+                                    "American Indian/Alaska Native only"),
+                        REGION = c("South",
+                                   "West",
+                                   "North Central/Midwest",
+                                   "Northeast")
+                        )
+```
+
+```{r, echo = FALSE}
+predicted_odds <- augment(hip4_model, newdata = ref_grid)
+```
+
+```{r, echo = FALSE}
+ggplot(data = predicted_odds, aes(x=FAMTOTINC,
+                                  y= exp(.fitted),
+                                  color=REGION)) +
+  geom_line() +
+  facet_wrap(~RACENEW) +
+  geom_jitter(data = HIPROBPAYR_data,
+              mapping = aes(y = HIPROBPAYR),
+              height = .01
+              ) +
+  theme(axis.text.x = element_text(angle=45, hjust = 1)) +
+  theme(legend.position = "bottom") +
+  labs(x = "Annual Family Income in 2020 (USD)",
+       y = "Odds of Having Problems Paying Medical Bills",
+       color = "Region",
+       title = "Odds of Having Problems Paying Medical Bills by Race, Region, and Income")
+```
+## Discussion 
+We predicted that a person’s race, region, and income combined affects the odds of whether they will have issues paying medical bills. Our prediction ended up having some evidence backing it, but we cannot fully accept our hypothesis. For regions, only the South had significant enough difference from the baseline average. For race groups, only Black/African Americans and Asian racial groups had a significant difference from the baseline average. Finally, only one combination of race and region, Black/African Americans in the Midwest, had a significant difference from the baseline. Across all groups, a person’s annual income was a significant predictor of whether or not they had issues paying their medical bills. 
+
+Based on the IPUMS 2020 Health Survey, we can state that certain race groups, regions, and combination of race group and region are predictors of whether or not a person has issues paying for medical bills, but we cannot say that every racial group and region have a significant enough difference from the average. That is not to say that the racial groups and regions and their combinations do not have significance. We simply do not have the evidence to confirm or deny its significance. 
+
+It should also be noted that our data may produce less accurate results for observations related to “American Indian/Alaska Native only” & “Other Race and Multiple Race” categories. This is due to the relatively small percentage of the population, and thus our data, they make up compared to other racial groups.
+Similarly, our data is limited to the fact that some U.S. regions are simply less populated than other regions. ^[https://www.census.gov/popclock/data_tables.php?component=growth ] 
+
+To expand on our findings in the future, it would be helpful to research why these specific regions and race groups have more difficulties in paying for medical bills. One could also look into which states individuals live, and how many people contribute to the annual family income. Do they have pre-existing conditions? Does age affect the effect of race and region? This can all be further investigated with the help of our findings. 
+
+
+## Data Analysis Appendix 
+### Linearity 
+```{r, echo = FALSE}
+ggplot(predicted_odds,
+       aes(x = FAMTOTINC, y = .fitted, color = REGION)) +
+  facet_wrap(~RACENEW) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE, formula = y~x, alpha = 0.6) +
+  theme(axis.text.x = element_text(angle=45, hjust = 1)) +
+  theme(legend.position = "bottom")
+```
+In the logit vs. predictors plot, the line is relatively linear, approving the linearity assumption. 
+
+### Independence
+As for our independence issue, we initially had issues with the IPUMS data because it contained multiple individuals from the same household. We were able to fix this by selecting just one individual from each household in our data. Additionally, we encountered an independence issue with our RACENEW racial categories. We found that our _Other Race and Multiple Race_ variables were combinations of _Other Race and Multiple Race (2019-forward: Excluding American Indian/Alaska Native)_ and _American Indian/Alaska Native only variables_. We fixed this by using only _Other Race and Multiple Race (2019-forward: Excluding American Indian/Alaska Native)_ and renaming it to _Other Race and Multiple Race_. 
+
+### Randomness
+This project used data from the IPUMS National Health Interview Series which gathered its data from random households throughout the United states: “IPUMS USA data can be considered representative of geographic areas of all sizes, as long as the proper weights are applied. The standard errors of statistics based on smaller geographic areas will be larger than those based on national data, but this is due only to the reduced sample size rather than to the fact that one is analyzing a small area”. ^[https://usa.ipums.org/usa-action/faq] Thus, our randomness condition for our model is sufficed.  
+
+### Model Comparison
+```{r, echo = FALSE, warning=FALSE}
+hip5_model <- glm(HIPROBPAYR ~ REGION + RACENEW * FAMTOTINC,
+                  data = HIPROBPAYR_data,
+                  family = binomial
+                   )
+hip2_model <- glm(HIPROBPAYR ~ REGION * RACENEW * FAMTOTINC,
+                  data = HIPROBPAYR_data,
+                  family = binomial
+                   )
+anova(hip4_model, hip2_model,  test = 'LR')
+anova(hip5_model, hip4_model, test = 'LR')
+```
+
+
+### Multicollinearity 
+```{r, echo = FALSE, message = FALSE}
+vif(hip4_model)
+```
+We performed a variance inflation factor test and all our coefficients produced values less than 5 meaning we detected no multicollinearity issues. 
+
+### Full Model Summary 
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+# hip4_model$coefficients
+
+model_df <- as.data.frame(coef(summary(hip4_model)))
+
+rownames(model_df) <- c("(Intercept)",
+                        "North Central/Midwest", 
+                        "South", 
+                        "West", 
+                        "Black/African American only", 
+                        "American Indian/Alaska Native only", 
+                        "Asian only", 
+                        "Other Race and Multiple Race", 
+                        "FAMTOTINC",  
+                        "North Central/Midwest:Black/African American only", 
+                        "South:Black/African American only", 
+                        "West:Black/African American only", 
+                        "North Central/Midwest:American Indian/Alaska Native only", 
+                        "South:American Indian/Alaska Native only", 
+                        "West:American Indian/Alaska Native only", 
+                        "North Central/Midwest:Asian only", 
+                        "South:Asian only", 
+                        "West:Asian only", 
+                        "North Central/Midwest:Other Race and Multiple Race", 
+                        "South:Other Race and Multiple Race", 
+                        "West:Other Race and Multiple Race")
+
+model_df
+
+```
+Our original model summary involved redundant category names in the coefficient variable names. This made it difficult to understand the summary of the model. Thus, we removed the category names from the variable names in this summary for ease of reading. 
+
+### Data Count Summary
+```{r, echo=FALSE}
+HIPROBPAYR_data |>
+  count(REGION)
+HIPROBPAYR_data |>
+  count(RACENEW)
+HIPROBPAYR_data |>
+  count(REGION, RACENEW)
+```
+

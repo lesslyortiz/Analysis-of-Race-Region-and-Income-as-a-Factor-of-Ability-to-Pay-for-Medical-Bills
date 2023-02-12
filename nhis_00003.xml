@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ipums-ddi-xslt.xsl"?>
+<codeBook ID="ddi2-dd463cf0-44f3-013b-23ed-0242c0a83007-nhis_00003.dat-nhis.ipums.org" version="2.5" xmlns="ddi:codebook:2_5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd">
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>Codebook for an Integrated Health Interview Series Data Extract</titl>
+        <subTitl>DDI 2.5 metadata describing the extract file  'nhis_00003.dat'</subTitl>
+        <IDNo>ddi2-dd463cf0-44f3-013b-23ed-0242c0a83007-nhis_00003.dat-nhis.ipums.org</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">IPUMS</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="IPUMS" affiliation="University of Minnesota" role="Documentation">IPUMS</producer>
+        <prodDate date="2022-11-15">November 15, 2022</prodDate>
+        <prodPlac>IPUMS, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact URI="https://ipums.org" affiliation="University of Minnesota">IPUMS</contact>
+      </distStmt>
+    </citation>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>User Extract nhis_00003.dat</titl>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">IPUMS</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="IPUMS" affiliation="University of Minnesota" role="Documentation">IPUMS</producer>
+        <prodDate date="2022-11-15">November 15, 2022</prodDate>
+        <prodPlac>IPUMS, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact URI="https://ipums.org" affiliation="University of Minnesota">IPUMS</contact>
+      </distStmt>
+      <serStmt>
+        <serName abbr="nhis">IPUMS NHIS</serName>
+        <serInfo>DOI:10.18128/D070.V7.2</serInfo>
+      </serStmt>
+      <verStmt>
+        <version date="2022-11-15"/>
+      </verStmt>
+    </citation>
+    <stdyInfo>
+      <subject>
+        <topcClas vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</topcClas>
+        <topcClas vocab="IPUMS">Geography Variables -- HOUSEHOLD</topcClas>
+        <topcClas vocab="IPUMS">Technical Person Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Core Demographic Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Ethnicity/Nativity Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Total Income and Earnings Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Access to Care Variables -- PERSON</topcClas>
+      </subject>
+      <sumDscr ID="sdatref-2443">
+        <timePrd date="2020" event="single">2020</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2020 NHIS
+]]></notes>
+    </stdyInfo>
+    <dataAccs>
+      <useStmt>
+        <confDec required="yes"><![CDATA[The Public Health Service Act (Section 308 (d)) provides that the data collected by the National Center for Health Statistics (NCHS), Centers for Disease Control and Prevention (CDC), may be used only for the purpose of health statistical reporting and analysis. Any effort to determine the identity of any reported case is prohibited by this law. NCHS does all it can to assure that the identity of data subjects cannot be disclosed. All direct identifiers, as well as any characteristics that might lead to identification, are omitted from the data files. Any intentional identification or disclosure of a person or establishment violates the assurances of confidentiality given to the providers of the information. 
+
+Therefore, users will: 
+
+Use the data in these data files for statistical reporting and analysis only. 
+
+Make no use of the identity of any person or establishment discovered inadvertently and advise the Director, NCHS, of any such discovery (301-458-4500). 
+
+Not link these data files with individually identifiable data from other NCHS or non-NCHS data files. 
+
+By using these data, you signify your agreement to comply with the above-stated statutorily-based requirements. ]]></confDec>
+        <contact URI="http://www.nhis.ipums.org/" affiliation="IPUMS">Integrated Health Interview Series</contact>
+        <citReq><![CDATA[Publications and research reports based on the NHIS database must cite it appropriately.  The citation is as follows:
+
+Lynn A. Blewett, Julia A. Rivera Drew, Miriam L. King, Kari C.W. Williams, Natalie Del Ponte and Pat Convey. IPUMS Health Surveys: National Health Interview Survey, Version 7.2 [dataset]. Minneapolis, MN: IPUMS, 2022. https://doi.org/10.18128/D070.V7.2
+
+If possible, citations should also include the URL for the NHIS site:  http://www.nhis.ipums.org.
+
+Please see http://www.nhis.ipums.org/nhis/citation.shtml for precise formatting of the citation.]]></citReq>
+        <conditions><![CDATA[The Public Health Service Act (Section 308 (d)) provides that the data collected by the National Center for Health Statistics (NCHS), Centers for Disease Control and Prevention (CDC), may be used only for the purpose of health statistical reporting and analysis. Any effort to determine the identity of any reported case is prohibited by this law. NCHS does all it can to assure that the identity of data subjects cannot be disclosed. All direct identifiers, as well as any characteristics that might lead to identification, are omitted from the data files. Any intentional identification or disclosure of a person or establishment violates the assurances of confidentiality given to the providers of the information. 
+
+Therefore, users must: 
+
+Use the data in these data files for statistical reporting and analysis only. 
+
+Make no use of the identity of any person or establishment discovered inadvertently and advise the Director, NCHS, of any such discovery (301-458-4500). 
+
+Not link these data files with individually identifiable data from other NCHS or non-NCHS data files. 
+
+By using these data, you signify your agreement to comply with the above-stated statutorily-based requirements. 
+
+Furthermore, users of NHIS data must agree to abide by the conditions of use. Users must agree to the following conditions:
+  
+  
+(1) Use the data in these data files for statistical reporting and analysis only 
+
+(2) Make no use of the identity of any person or establishment discovered inadvertently and advise the Director of NCHS of any such discovery (301-458-4500) 
+
+(3) Do not link these data with individually-identifiable data from NCHS or non-NCHS data files 
+
+(4) No fees may be charged for use or distribution of the data.  All persons are granted a limited license to use and distribute these data, but you may not charge a fee for the data if you distribute them to others. 
+
+(5) Cite the NHIS appropriately.  Publications and research reports based on the database must cite it appropriately.  Please see http://www.nhis.ipums.org/nhis/citation.shtml
+
+(6) NHIS cannot be used to study small geographic areas.  The smallest geographical areas identified in the NHIS are regions (groups of states) and a limited number of metropolitan areas.
+
+(7) This system provides individual-level data only.  The NHIS Data Extraction System will not produce tables. You will need to use a statistical software package, such as Stata, SAS, or SPSS, to analyze the downloaded data.  Alternatively, you may use the NHIS-SDA tabulator to produce tables online, without making a data extract.]]></conditions>
+        <disclaimer>The user of the data acknowledges that the original collector of the data, the authorized distributor of the data, and the relevant funding agency bear no responsibility for use of the data or for interpretations or inferences based upon such uses.</disclaimer>
+      </useStmt>
+    </dataAccs>
+    <notes><![CDATA[User-provided description:  Revision of (Revision of (sds 291 project))]]></notes>
+    <notes>This extract is a revision of the user's previous extract, ID 30203664.</notes>
+  </stdyDscr>
+  <fileDscr ID="ExtractData">
+    <fileTxt>
+      <fileName>nhis_00003.dat</fileName>
+      <fileCont>Microdata records</fileCont>
+      <fileStrc type="rectangular"/>
+      <fileType charset="ISO-8859-1">ISO-8859-1 data file</fileType>
+      <format>fixed length fields</format>
+      <filePlac>IPUMS, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</filePlac>
+    </fileTxt>
+  </fileDscr>
+  <dataDscr>
+    <var ID="YEAR" dcml="0" files="ExtractData" intrvl="contin" name="YEAR">
+      <location EndPos="4" StartPos="1" width="4"/>
+      <labl>Survey year</labl>
+      <txt><![CDATA[YEAR is a four-digit variable reporting the calendar year (e.g., 2003) the survey was conducted and the data were collected. YEAR indicates the survey year reported on the household record.]]></txt>
+      <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="SERIAL" dcml="0" files="ExtractData" intrvl="contin" name="SERIAL">
+      <location EndPos="10" StartPos="5" width="6"/>
+      <labl>Sequential Serial Number, Household Record</labl>
+      <txt><![CDATA[SERIAL is an IPUMS NHIS-constructed value that is an identifying number unique to each household in a given survey year. The combination of YEAR and SERIAL provides a unique identifier for every household in the IPUMS NHIS database.]]></txt>
+      <codInstr><![CDATA[CodesSERIAL is a 6-digit numeric variable.]]></codInstr>
+      <concept vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="STRATA" dcml="0" files="ExtractData" intrvl="contin" name="STRATA">
+      <location EndPos="14" StartPos="11" width="4"/>
+      <labl>Stratum for variance estimation</labl>
+      <txt><![CDATA[STRATA is an IPUMS NHIS-constructed variable based on the NHIS sample design variables in the public use files concatenated with a sample design period indicator. STRATA represents the impact of the sample design stratification on the estimates of variance and standard errors. It is constant within a sample design period and changes between sample design periods. For analysis, researchers need to use STRATA in conjunction with PSU to account for stratification and clustering when computing variance estimates with IPUMS NHIS data.
+
+See the User Notes on variance estimation for additional information.     
+
+After the 2019 redesign, there is no longer a sampling weight to produce household population estimates. See the user note on the calculation and use of sampling weights for additional information.]]></txt>
+      <codInstr><![CDATA[CodesSTRATA is a 5-digit numeric variable.
+
+000:	Not in Universe]]></codInstr>
+      <concept vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="PSU" dcml="0" files="ExtractData" intrvl="contin" name="PSU">
+      <location EndPos="17" StartPos="15" width="3"/>
+      <labl>Primary sampling unit (PSU) for variance estimation</labl>
+      <txt><![CDATA[PSU is the primary sampling unit variable that represents the impact of the sample design clustering on the estimates of variance and standard errors. It is constant within a sample design period and changes between sample design periods. For analysis, researchers need to use PSU in conjunction with STRATA to account for stratification and clustering when computing variance estimates with IPUMS NHIS data.  
+
+See the User Notes on variance estimation for additional information.
+
+After the 2019 redesign, there is no longer a sampling weight to produce household population estimates. See the user note on the calculation and use of sampling weights for additional information.]]></txt>
+      <codInstr><![CDATA[CodesPSU is a 3-digit numeric variable.
+
+000:	Not in Universe]]></codInstr>
+      <concept vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="NHISHID" dcml="0" files="ExtractData" intrvl="contin" name="NHISHID">
+      <location EndPos="31" StartPos="18" width="14"/>
+      <labl>NHIS Unique identifier, household</labl>
+      <txt><![CDATA[NHISHID is an IPUMS NHIS-constructed value that is an identifying number unique to each household in a given survey year. Using NHISHID, analysts can link IPUMS NHIS data with additional household-level data elements, from the NHIS source public use data files, that are not currently available in IPUMS.  NHISHID is a single variable constructed by concatenating multiple data elements from the NHIS source data files.  Analysts wishing to link person-level NHIS data should use the person-level linking key NHISPID.
+
+See the user note on LINKING for instructions on how to create links between IPUMS NHIS and NHIS source data.  
+
+After the 2019 redesign, there is no longer a sampling weight to produce household population estimates. See the user note on the calculation and use of sampling weights for additional information.]]></txt>
+      <codInstr><![CDATA[CodesNHISHID is a 14-character string variable.]]></codInstr>
+      <concept vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="character"/>
+    </var>
+    <var ID="REGION" dcml="0" files="ExtractData" intrvl="discrete" name="REGION">
+      <location EndPos="33" StartPos="32" width="2"/>
+      <labl>Region of residence</labl>
+      <txt><![CDATA[REGION reports the region of the U.S. where the housing unit containing survey participants was located.  The geographic information included in REGION was added during processing, rather than ascertained via questioning.  REGION is the smallest geographic unit identified in the IPUMS NHIS data for 1985 forward.  In 1968-1984, a limited number (under 30) of metropolitan areas were also identified (METAREA).
+
+The four regions--Northeast, North Central/Midwest, South, and West--correspond to the U.S. regions recognized by the Census Bureau. Divisions and states included in the four regions are as follows:
+
+Northeast:  New England Division (Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, and Connecticut) and Middle Atlantic Division (New York, New Jersey, and Pennsylvania)
+
+North Central/Midwest: East North Central Division (Michigan, Ohio, Indiana, Illinois, Wisconsin) and West North Central Division (Minnesota, Iowa, Missouri, North Dakota, South Dakota, Kansas, and Nebraska)
+
+South: South Atlantic Division (Delaware, Maryland, District of Columbia, Virginia, West Virginia, North Carolina, South Carolina, Georgia, and Florida), East South Central Division (Kentucky, Tennessee, Mississippi, and Alabama), and West South Central Division (Texas, Arkansas, Oklahoma, and Louisiana)
+
+West: Pacific Division (Washington, Alaska, Oregon, California, and Hawaii) and Mountain Division (Montana, Idaho, Wyoming, Colorado, New Mexico, Arizona, Utah, and Nevada). 
+
+After the 2019 redesign, there is no longer a sampling weight to produce household population estimates. See the user note on the calculation and use of sampling weights for additional information.]]></txt>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>Northeast</labl>
+      </catgry>
+      <catgry>
+        <catValu>02</catValu>
+        <labl>North Central/Midwest</labl>
+      </catgry>
+      <catgry>
+        <catValu>03</catValu>
+        <labl>South</labl>
+      </catgry>
+      <catgry>
+        <catValu>04</catValu>
+        <labl>West</labl>
+      </catgry>
+      <catgry>
+        <catValu>08</catValu>
+        <labl>NO DATA IN ROUND</labl>
+      </catgry>
+      <catgry>
+        <catValu>09</catValu>
+        <labl>Unknown</labl>
+      </catgry>
+      <concept vocab="IPUMS">Geography Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="PERNUM" dcml="0" files="ExtractData" intrvl="contin" name="PERNUM">
+      <location EndPos="35" StartPos="34" width="2"/>
+      <labl>Person number within family/household (from reformatting)</labl>
+      <txt><![CDATA[PERNUM is an IPUMS NHIS-constructed variable that numbers all persons within each family or within each household consecutively (starting with "1") in the order in which they appear in the original NHIS data.  PERNUM was created by IPUMS NHIS during the process of reformatting the original NHIS public use files. 
+
+Prior to 2019, PERNUM numbers all persons within each family. Beginning in 2019, PERNUM numbers all person within a household and has a maximum of "2," as only the sample child and sample adult are identified in the original NHIS data. For more information, see the Comparability section.]]></txt>
+      <codInstr><![CDATA[CodesPERNUM is a 2-digit numeric variable.]]></codInstr>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="NHISPID" dcml="0" files="ExtractData" intrvl="contin" name="NHISPID">
+      <location EndPos="51" StartPos="36" width="16"/>
+      <labl>NHIS Unique Identifier, person</labl>
+      <txt><![CDATA[NHISPID is an IPUMS NHIS-constructed value that is an identifying number unique to each person in a given survey year.  Using NHISPID, analysts can link IPUMS NHIS data with additional data elements, from the NHIS source public use data files, that are not currently available in IPUMS.  For example, researchers can use NHISPID to link variables in IPUMS NHIS with other variables from the core NHIS files variables.  Alternatively, users may use NHISPID to link variables from IPUMS with variables from NHIS supplements that are not yet part of IPUMS NHIS. NHISPID is a single variable constructed by concatenating multiple data elements from the NHIS source data files.  
+
+Analysts wishing to link household-level NHIS data should use the household-level linking key NHISHID.
+
+See the user note on LINKING for instructions on how to create links between IPUMS NHIS and NHIS source data.]]></txt>
+      <codInstr><![CDATA[CodesNHISPID is a 16-character string variable.]]></codInstr>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="character"/>
+    </var>
+    <var ID="HHX" dcml="0" files="ExtractData" intrvl="contin" name="HHX">
+      <location EndPos="58" StartPos="52" width="7"/>
+      <labl>Household number (from NHIS)</labl>
+      <txt><![CDATA[For sample adults and sample children, HHX reports the person's household number on the original NHIS data. HHX is unique within sample but only unique across samples when combined with information on year. Prior to 2019, this variable was available for all persons.]]></txt>
+      <codInstr><![CDATA[This is a 7-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="character"/>
+    </var>
+    <var ID="ASTATFLG" dcml="0" files="ExtractData" intrvl="discrete" name="ASTATFLG">
+      <location EndPos="59" StartPos="59" width="1"/>
+      <labl>Sample adult flag</labl>
+      <txt><![CDATA[ASTATFLG identifies the record of a sample adult. A sample adult is the one person over age 18 per household who is randomly selected to complete the sample adult questionnaire. For 1997-2018, a sample adult is the one adult per family who was selected at random by the computerized survey instrument to answer additional health-related questions, under the survey design instituted in 1997.  All persons other than sample adults (those not having the value 1 in ASTATFLG) are coded as "not in universe" for variables derived from the additional questions asked only of sample adults.  (Some additional questions were asked of both sample adults and sample children.)  Every adult in each family, except for active duty armed forces members, was eligible to be selected as the sample adult.  
+
+Prior to 2019, ASTATFLG has the value "no one selected as sample adult" (code 4) for all adults in the family in the following two cases: 1) sample adult status was incorrectly assigned to someone in the armed forces, or 2) it could not be ascertained which adult in the family was chosen as sample adult.   
+
+For 2020 only, SALNGPRTFLG further distinguishes between sample adults included in the longitudinal sample and sample adults included in the partial sample. Please see the user note on COVID-related changes to the NHIS for more information on the longitudinal and partial samples.
+
+A similar flag variable, CSTATFLG, identifies the record of a sample child.
+
+This variable is automatically included in all extracts, but only has valid values for 1997 forward.]]></txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>NIU</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Sample adult, has record</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Sample adult, no record</labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl>Not selected as sample adult</labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl>No one selected as sample adult</labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl>Armed forces member</labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl>AF member, selected as sample adult</labl>
+      </catgry>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="CSTATFLG" dcml="0" files="ExtractData" intrvl="discrete" name="CSTATFLG">
+      <location EndPos="60" StartPos="60" width="1"/>
+      <labl>Sample child flag</labl>
+      <txt><![CDATA[CSTATFLG identifies the record of a sample child. A sample child is the one person under age 18 per household who is randomly selected to complete the sample child questionnaire. For 1997-2018, the sample child is the one person under age 18 per family who was selected at random by the computerized survey instrument for additional health-related questions, under the survey design instituted in 1997. All persons other than sample children (those not having the value 1 in CSTATFLG) are coded as "not in universe" for variables derived from these additional questions asked only of sample children.  (Some additional questions were asked of both sample adults and sample children.)   
+
+Prior to 2019, Every child in each family, except for active duty armed forces members and emancipated minors, was eligible to be selected as the sample child.  Emancipated minors are persons age 14 to 17 who are married or living with a partner OR who live on their own without the supervision of a parent, other adult family member, or legal guardian.  
+
+CSTATFLG has the value "no one selected as sample child" (code 4) for all children in the family in the following two cases prior to 2019: 1) if sample child status was incorrectly assigned to someone who was ineligible, or 2) if it was unknown which child in the family was chosen as sample child.   
+
+A similar flag variable, ASTATFLG, identifies the record of a sample adult.
+
+This variable is automatically included in all extracts, but only has valid values for 1997 forward.]]></txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>NIU</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Sample child-has record</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Sample child-no record</labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl>Not selected as sample child</labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl>No one selected as sample child</labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl>Emancipated minor</labl>
+      </catgry>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="AGE" dcml="0" files="ExtractData" intrvl="contin" name="AGE">
+      <location EndPos="63" StartPos="61" width="3"/>
+      <labl>Age</labl>
+      <txt><![CDATA[AGE reports the individual's age, in years since their last birthday. Starting in 2019, "Unknown-refused" and "Unknown-don't know" are allowed responses. Prior to 2019 age is not coded as "unknown" for any persons included in the IPUMS NHIS data. As the public use file's codebooks for 1998-2003 state, "Because age is an important variable for instrument check items and in developing the weights, all respondents must have data on age."]]></txt>
+      <codInstr><![CDATA[CodesAGE is a 3-digit-numeric variable.
+
+085:	Top code for 85 years or older (1963-1968 and 1997-forward)
+090:	Top code for 90 years or older (1996 only)
+099:	Top code for 99 years or older (1969-1995)
+997:	Unknown-refused
+998:	Unknown-not ascertained
+999:	Unknown-don't know]]></codInstr>
+      <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="SEX" dcml="0" files="ExtractData" intrvl="discrete" name="SEX">
+      <location EndPos="64" StartPos="64" width="1"/>
+      <labl>Sex</labl>
+      <txt><![CDATA[SEX indicates whether the person was male or female.  
+
+Starting in 2019, "Unknown-refused" and "Unknown-don't know" responses are allowed. Prior to 2019, SEX is not coded as "unknown" for any persons included in the IPUMS NHIS data.
+
+According to the 2020 Survey Description, for some variables, including SEX, the 2020 responses of sample adults that were part of the 2020 longitudinal sample were overwritten with their 2019 responses "to mitigate disclosure risks associated with differences in response from repeated measures among the same Sample Adults" (33). The sample adults' actual 2020 responses can be accessed through a Research Data Center (RDC). For more information on the 2020 longitudinal sample, please see SALNGPRTFLG.]]></txt>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Male</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Female</labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl>Unknown-refused</labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl>Unknown-not ascertained</labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl>Unknown-don't know</labl>
+      </catgry>
+      <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="RACENEW" dcml="0" files="ExtractData" intrvl="discrete" name="RACENEW">
+      <location EndPos="67" StartPos="65" width="3"/>
+      <labl>Self-reported Race (Post-1997 OMB standards)</labl>
+      <txt><![CDATA[RACENEW provides information on self-reported race of sample adults and sample children (and prior to 2019, all persons), using the October 30, 1997 revision of Statistical Policy Directive No. 15, Race and Ethnic Standards for Federal Statistics and Administrative Reporting.]]></txt>
+      <catgry>
+        <catValu>100</catValu>
+        <labl>White only</labl>
+      </catgry>
+      <catgry>
+        <catValu>200</catValu>
+        <labl>Black/African American only</labl>
+      </catgry>
+      <catgry>
+        <catValu>300</catValu>
+        <labl>American Indian/Alaska Native only</labl>
+      </catgry>
+      <catgry>
+        <catValu>400</catValu>
+        <labl>Asian only</labl>
+      </catgry>
+      <catgry>
+        <catValu>500</catValu>
+        <labl>Other Race and Multiple Race</labl>
+      </catgry>
+      <catgry>
+        <catValu>510</catValu>
+        <labl>Other Race and Multiple Race (2019-forward: Excluding American Indian/Alaska Native)</labl>
+      </catgry>
+      <catgry>
+        <catValu>520</catValu>
+        <labl>Other Race</labl>
+      </catgry>
+      <catgry>
+        <catValu>530</catValu>
+        <labl>Race Group Not Releasable</labl>
+      </catgry>
+      <catgry>
+        <catValu>540</catValu>
+        <labl>Multiple Race</labl>
+      </catgry>
+      <catgry>
+        <catValu>541</catValu>
+        <labl>Multiple Race (1999-2018: Including American Indian/Alaska Native)</labl>
+      </catgry>
+      <catgry>
+        <catValu>542</catValu>
+        <labl>American Indian/Alaska Native and Any Other Race</labl>
+      </catgry>
+      <catgry>
+        <catValu>997</catValu>
+        <labl>Unknown-Refused</labl>
+      </catgry>
+      <catgry>
+        <catValu>998</catValu>
+        <labl>Unknown-Not ascertained</labl>
+      </catgry>
+      <catgry>
+        <catValu>999</catValu>
+        <labl>Unknown-Don't Know</labl>
+      </catgry>
+      <concept vocab="IPUMS">Ethnicity/Nativity Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="INCFAM07ON" dcml="0" files="ExtractData" intrvl="discrete" name="INCFAM07ON">
+      <location EndPos="69" StartPos="68" width="2"/>
+      <labl>Total combined family income (2007+)</labl>
+      <txt><![CDATA[For sample adults and sample children, INCFAM07ON provides total grouped family income using an income bracket methodology introduced in 2007. Responses are reported in nominal dollars and have not been adjusted for inflation. Prior to 2019, INCFAM07ON was asked of all persons.
+&nbsp;Starting with the 2007 NHIS, the income amount follow-up questions that had been in place since 1997 were replaced with a series of unfolding bracket questions. The unfolding bracket method asked a series of closed-ended income range questions (e.g., "Is it less than $50,000?") if the respondent did not provide an answer to the exact income amount question. The closed-ended income range questions were constructed so that each successive question establishes a smaller range for the amount of the family's income.]]></txt>
+      <catgry>
+        <catValu>10</catValu>
+        <labl>$0 - $49,999 (no further detail)</labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl>$0 - $34,999</labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl>$35,000 - $49,999</labl>
+      </catgry>
+      <catgry>
+        <catValu>20</catValu>
+        <labl>$50,000  and over (no further detail; available 2007-2013)</labl>
+      </catgry>
+      <catgry>
+        <catValu>21</catValu>
+        <labl>$50,000 - $99,999 (no further detail)</labl>
+      </catgry>
+      <catgry>
+        <catValu>22</catValu>
+        <labl>$50,000 - $74,999</labl>
+      </catgry>
+      <catgry>
+        <catValu>23</catValu>
+        <labl>$75,000 - $99,999</labl>
+      </catgry>
+      <catgry>
+        <catValu>24</catValu>
+        <labl>$100,000 and over</labl>
+      </catgry>
+      <catgry>
+        <catValu>96</catValu>
+        <labl>Undefined</labl>
+      </catgry>
+      <catgry>
+        <catValu>99</catValu>
+        <labl>Unknown</labl>
+      </catgry>
+      <concept vocab="IPUMS">Total Income and Earnings Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="FAMTOTINC" dcml="0" files="ExtractData" intrvl="contin" name="FAMTOTINC">
+      <location EndPos="75" StartPos="70" width="6"/>
+      <labl>Total family income, last year (top coded)</labl>
+      <txt><![CDATA[For sample adults and sample children, FAMTOTINC reports the respondent's best estimate of the total income of all family members before taxes in the year prior to the current year. If the sample adult and sample child are from the same family, the information is collected in whichever interview occurs first and is copied to an identical variable for the other sampled family member in a post-processing step (i.e., if the sample child interview occurs first, the family-level information is later replicated on the sample adult file). For more information on how the 2019 redesign impacted data collection, please see the user note. IMPINCFAM indicates if the family income was imputed and QTCINCFAM indicates if the income was top-coded.]]></txt>
+      <codInstr><![CDATA[CodesFAMTOTINC is a 6-digit variable:
+
+220000: $220,000 or more (2019)
+250000: $250,000 or more (2020-forward)]]></codInstr>
+      <concept vocab="IPUMS">Total Income and Earnings Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="DELAYCOST" dcml="0" files="ExtractData" intrvl="discrete" name="DELAYCOST">
+      <location EndPos="76" StartPos="76" width="1"/>
+      <labl>Medical care delayed due to cost, past 12 months</labl>
+      <txt><![CDATA[For sample adults and sample children, DELAYCOST indicates whether, during the past twelve months, individuals delayed seeking medical care because of worry about the cost. In 1993, DELAYCOST was asked of all persons in quarters 3 and 4 and in 1994-2018 it was asked of all persons. For 1997-2018, respondents were explicitly told not to include dental care when answering this question. Beginning in 2019, respondents were not told to exclude dental care when answering this question, but they were also asked whether, during the past 12 months, they had delayed getting dental care due to the cost (DELAYDT). 
+
+ The Field Representative's Manual for 1993 forward noted, "Delayed assumes that medical care has been or will eventually be received."  This definition of the term was not routinely shared with respondents.
+
+Related Variables&nbsp;Several other variables available for 1997 forward address reasons other than "worry about the cost" that caused sample adults and sample children to delay getting medical care.  The non-financial reasons for delays in getting medical care identified in these variables are: "you couldn't get an appointment soon enough" (DELAYAPPT); "the clinic/doctor's office wasn't open when you could get there" (DELAYHRS); "you couldn't get through on the telephone" (DELAYPHONE); "you didn't have transportation" (DELAYTRANS); and "once you get there, you have to wait too long to see the doctor" (DELAYWAIT). 
+
+Available for 1997 forward, YBARCARE, which identifies individuals who needed but did not get medical care because they could not afford it during the past 12 months, covers some of the same ground as DELAYCOST.  However, the wording of the question for YBARCARE implies that medical care was foregone for financial reasons, while the wording of the question for DELAYCOST refers to care delayed for financial reasons.  The difference in these two variables may, however, be less than is implied by this semantic distinction.  In the case of some acute illnesses (such as respiratory infections and "stomach flu"), medical care that was delayed was doubtless ultimately foregone in many cases.]]></txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>NIU</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>No</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Yes</labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl>Unknown-refused</labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl>Unknown-not ascertained</labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl>Unknown-don't know (1993-96: DK or refused)</labl>
+      </catgry>
+      <concept vocab="IPUMS">Access to Care Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="YBARCARE" dcml="0" files="ExtractData" intrvl="discrete" name="YBARCARE">
+      <location EndPos="77" StartPos="77" width="1"/>
+      <labl>Needed but couldn't afford medical care, past 12 months</labl>
+      <txt><![CDATA[For sample children and sample adults, YBARCARE indicates whether, at any time during the past 12 months, individuals needed medical care but did not get it because they could not afford it. Respondents were told not to include dental care when answering this question. Please see the Universe tab for changes to the universe over time.
+
+For 1997 forward, the survey also collected information about whether, at any time during the past twelve months, sample adults and sample children needed but did not get specific types of medical care because they could not afford it.  The specific types of medical care foregone for financial reasons that the survey identified were mental health care or counseling (YBARMENTAL), prescription medicines (YBARMEDS), eyeglasses (YBARGLASS), dental care, including check-ups (YBARDENTAL), follow-up care (YBARFOLLOW), and specialist care (YBARSPECL).]]></txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>NIU</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>No</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Yes</labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl>Unknown-refused</labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl>Unknown-not ascertained</labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl>Unknown-don't know</labl>
+      </catgry>
+      <concept vocab="IPUMS">Access to Care Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="YBARMEDS" dcml="0" files="ExtractData" intrvl="discrete" name="YBARMEDS">
+      <location EndPos="78" StartPos="78" width="1"/>
+      <labl>Needed but couldn't afford prescription medicines, past 12 months</labl>
+      <txt><![CDATA[YBARMEDS indicates whether, at any time during the past 12 months, sample adults and sample children needed prescription medicines but didn't get them because they couldn't afford them. 
+
+The Field Representative's Manual for 1999-2000 instructed interviewers to "include all types of financial limitations that prevented the person from getting medical services."  The Manual for 1997-2003 also included a definition of prescription medicine as "medication which can only be obtained with the approval of a licensed health care professional. The medication is usually obtained through a pharmacy using a written note or telephoned instruction" to the pharmacy from a doctor, dentist, or other health care professional. A similar definition was included in the 2004-2006 Manuals. These points in the documentation were not routinely shared with respondents.
+
+YBARMEDS was one of a series of questions intended to determine if the family's access to health care was restricted because of financial concerns.  The survey also collected information about whether, at any time in the past 12 months, sample adults and sample children needed but did not get eyeglasses (YBARGLASS), mental health care or counseling (YBARMENTAL), dental care, including checkups, (YBARDENTAL), follow-up care (YBARFOLLOW), and specialist care (YBARSPECL).]]></txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>NIU</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>No</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Yes</labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl>Unknown-refused</labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl>Unknown-not ascertained</labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl>Unknown-don't know</labl>
+      </catgry>
+      <concept vocab="IPUMS">Access to Care Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="HIPROBPAYR" dcml="0" files="ExtractData" intrvl="discrete" name="HIPROBPAYR">
+      <location EndPos="79" StartPos="79" width="1"/>
+      <labl>Problems paying or unable to pay medical bills, past 12 months</labl>
+      <txt><![CDATA[For sample adults and sample children (and, prior to 2019, all persons), HIPROBPAYR reports if the family had problems paying or were unable to pay any medical bills in the past 12 months.  This included bills for doctors, dentists, hospitals, therapists, medication, equipment, nursing home or home care.]]></txt>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>No</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Yes</labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl>Unknown-refused</labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl>Unknown-not ascertained</labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl>Unknown-don't know</labl>
+      </catgry>
+      <concept vocab="IPUMS">Access to Care Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+  </dataDscr>
+</codeBook>
